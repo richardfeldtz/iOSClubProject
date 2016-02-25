@@ -85,7 +85,7 @@
         <!--Item-->
         <scene sceneID="tOB-EJ-SQO">
             <objects>
-                <viewController id="aYD-LE-a62" sceneMemberID="viewController">
+                <viewController id="aYD-LE-a62" customClass="LeftRightViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zGN-FN-dPp"/>
                         <viewControllerLayoutGuide type="bottom" id="WNZ-Zr-pFo"/>
@@ -94,8 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-iF-PVp">
-                                <rect key="frame" x="20" y="234" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fist" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-iF-PVp">
+                                <rect key="frame" x="16" y="234" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FRb-iF-PVp" secondAttribute="height" multiplier="1:1" id="VEt-s0-ys8"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Ziz-x5-7m3"/>
@@ -103,8 +103,14 @@
                                     <constraint firstAttribute="width" constant="100" id="lZu-7V-URg"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="ioO-Pw-Hbs">
-                                <rect key="frame" x="200" y="234" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjn-8Z-koe">
+                                <rect key="frame" x="16" y="234" width="100" height="100"/>
+                                <connections>
+                                    <action selector="leftButtonPressed" destination="aYD-LE-a62" eventType="touchUpInside" id="Ihe-kj-S3u"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fist" translatesAutoresizingMaskIntoConstraints="NO" id="ioO-Pw-Hbs">
+                                <rect key="frame" x="204" y="234" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="4Io-xz-RUK"/>
                                     <constraint firstAttribute="height" constant="100" id="9u7-rc-S2A"/>
@@ -112,20 +118,38 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="cOo-ju-JfU"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-Yf-zWh">
+                                <rect key="frame" x="204" y="234" width="100" height="100"/>
+                                <connections>
+                                    <action selector="rightButtonPressed" destination="aYD-LE-a62" eventType="touchUpInside" id="okM-bf-IV8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FRb-iF-PVp" firstAttribute="leading" secondItem="Tmf-bS-uF1" secondAttribute="leadingMargin" id="2ls-ps-n7L"/>
+                            <constraint firstItem="PB0-Yf-zWh" firstAttribute="trailing" secondItem="ioO-Pw-Hbs" secondAttribute="trailing" id="5xq-NW-893"/>
                             <constraint firstItem="WNZ-Zr-pFo" firstAttribute="top" secondItem="ioO-Pw-Hbs" secondAttribute="bottom" constant="185" id="8Bv-l7-rDZ"/>
                             <constraint firstItem="ioO-Pw-Hbs" firstAttribute="width" secondItem="ioO-Pw-Hbs" secondAttribute="height" multiplier="1:1" id="8Qu-63-vSF"/>
                             <constraint firstItem="WNZ-Zr-pFo" firstAttribute="top" secondItem="FRb-iF-PVp" secondAttribute="bottom" constant="185" id="Fdc-zQ-UMw"/>
+                            <constraint firstItem="mjn-8Z-koe" firstAttribute="trailing" secondItem="FRb-iF-PVp" secondAttribute="trailing" id="OLW-6V-Nca"/>
                             <constraint firstItem="ioO-Pw-Hbs" firstAttribute="trailing" secondItem="Tmf-bS-uF1" secondAttribute="trailingMargin" id="V0u-pd-nQO"/>
+                            <constraint firstItem="mjn-8Z-koe" firstAttribute="bottom" secondItem="FRb-iF-PVp" secondAttribute="bottom" id="V7Y-rU-rXM"/>
                             <constraint firstItem="ioO-Pw-Hbs" firstAttribute="width" secondItem="ioO-Pw-Hbs" secondAttribute="height" multiplier="1:1" id="aNt-Rt-98v"/>
+                            <constraint firstItem="PB0-Yf-zWh" firstAttribute="bottom" secondItem="ioO-Pw-Hbs" secondAttribute="bottom" id="ca0-Of-wP7"/>
+                            <constraint firstItem="mjn-8Z-koe" firstAttribute="leading" secondItem="FRb-iF-PVp" secondAttribute="leading" id="chj-Js-rDR"/>
+                            <constraint firstItem="PB0-Yf-zWh" firstAttribute="leading" secondItem="ioO-Pw-Hbs" secondAttribute="leading" id="ftJ-m5-Puk"/>
+                            <constraint firstItem="PB0-Yf-zWh" firstAttribute="top" secondItem="ioO-Pw-Hbs" secondAttribute="top" id="gMP-UI-pQD"/>
+                            <constraint firstItem="mjn-8Z-koe" firstAttribute="top" secondItem="FRb-iF-PVp" secondAttribute="top" id="kfl-5i-jgH"/>
                             <constraint firstItem="FRb-iF-PVp" firstAttribute="width" secondItem="FRb-iF-PVp" secondAttribute="height" multiplier="1:1" id="svv-vA-KvK"/>
                             <constraint firstItem="FRb-iF-PVp" firstAttribute="width" secondItem="FRb-iF-PVp" secondAttribute="height" multiplier="1:1" id="w9L-ZI-LMw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="ekb-A9-A3k"/>
+                    <connections>
+                        <outlet property="leftHandImageView" destination="FRb-iF-PVp" id="akZ-HM-lVv"/>
+                        <outlet property="rightHandImageView" destination="ioO-Pw-Hbs" id="geo-TI-S5q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3Q-4K-WxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,6 +329,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Fist" width="100" height="100"/>
         <image name="arrow_left" width="100" height="100"/>
         <image name="arrow_right" width="100" height="100"/>
         <image name="hand" width="100" height="100"/>
