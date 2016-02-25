@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AF53C8CA7BFFC08B96C0096 /* libPods-iOSClubProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD48B62AF3EDE56C0BA63D3 /* libPods-iOSClubProject.a */; };
 		AA38C3C91C7E7904006AB49A /* LeftRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA38C3C81C7E7904006AB49A /* LeftRightViewController.m */; };
 		AA38C3CB1C7E7EA9006AB49A /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA38C3CA1C7E7EA9006AB49A /* ding.mp3 */; };
 		FE7A49C21C754F7900C691CD /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7A49C11C754F7900C691CD /* CounterViewController.m */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00FB7468224DC64FC86E3569 /* Pods-iOSClubProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSClubProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSClubProject/Pods-iOSClubProject.debug.xcconfig"; sourceTree = "<group>"; };
+		4C0FF489D5F203082B3C0FD3 /* Pods-iOSClubProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSClubProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSClubProject/Pods-iOSClubProject.release.xcconfig"; sourceTree = "<group>"; };
+		6BD48B62AF3EDE56C0BA63D3 /* libPods-iOSClubProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSClubProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA38C3C71C7E7904006AB49A /* LeftRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftRightViewController.h; sourceTree = "<group>"; };
 		AA38C3C81C7E7904006AB49A /* LeftRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftRightViewController.m; sourceTree = "<group>"; };
 		AA38C3CA1C7E7EA9006AB49A /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
@@ -52,12 +56,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7A49D21C7BE08600C691CD /* CoreMotion.framework in Frameworks */,
+				7AF53C8CA7BFFC08B96C0096 /* libPods-iOSClubProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C7A7BB865F6B76FCA48847D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00FB7468224DC64FC86E3569 /* Pods-iOSClubProject.debug.xcconfig */,
+				4C0FF489D5F203082B3C0FD3 /* Pods-iOSClubProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AED3D599F84B9ED31831CCDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BD48B62AF3EDE56C0BA63D3 /* libPods-iOSClubProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE7A49CC1C7BDC5000C691CD /* Counter Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +106,8 @@
 				FE7A49D11C7BE08600C691CD /* CoreMotion.framework */,
 				FEC6768F1C753CBD00AECA01 /* iOSClubProject */,
 				FEC6768E1C753CBD00AECA01 /* Products */,
+				0C7A7BB865F6B76FCA48847D /* Pods */,
+				AED3D599F84B9ED31831CCDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEC676A41C753CBD00AECA01 /* Build configuration list for PBXNativeTarget "iOSClubProject" */;
 			buildPhases = (
+				F964D3565897481BDC2A4E2E /* Check Pods Manifest.lock */,
 				FEC676891C753CBD00AECA01 /* Sources */,
 				FEC6768A1C753CBD00AECA01 /* Frameworks */,
 				FEC6768B1C753CBD00AECA01 /* Resources */,
+				3342D290BB326E7E2AD0851C /* Embed Pods Frameworks */,
+				5D763485A905291A82890653 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +183,7 @@
 				TargetAttributes = {
 					FEC6768C1C753CBD00AECA01 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = QBZWT8ELNQ;
 					};
 				};
 			};
@@ -191,6 +219,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3342D290BB326E7E2AD0851C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSClubProject/Pods-iOSClubProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D763485A905291A82890653 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSClubProject/Pods-iOSClubProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F964D3565897481BDC2A4E2E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FEC676891C753CBD00AECA01 /* Sources */ = {
@@ -313,22 +389,26 @@
 		};
 		FEC676A51C753CBD00AECA01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00FB7468224DC64FC86E3569 /* Pods-iOSClubProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iOSClubProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosclub.iOSClubProject;
+				PRODUCT_BUNDLE_IDENTIFIER = iOSClubProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		FEC676A61C753CBD00AECA01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C0FF489D5F203082B3C0FD3 /* Pods-iOSClubProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iOSClubProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosclub.iOSClubProject;
+				PRODUCT_BUNDLE_IDENTIFIER = iOSClubProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

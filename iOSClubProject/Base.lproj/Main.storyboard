@@ -124,6 +124,24 @@
                                     <action selector="rightButtonPressed" destination="aYD-LE-a62" eventType="touchUpInside" id="okM-bf-IV8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ut8-Ws-mmC">
+                                <rect key="frame" x="94" y="20" width="132" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1p-jt-MUk">
+                                <rect key="frame" x="233" y="360" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90Z-Wq-eUo">
+                                <rect key="frame" x="45" y="360" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,7 +165,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="ekb-A9-A3k"/>
                     <connections>
+                        <outlet property="guessRateLabel" destination="Ut8-Ws-mmC" id="RKv-3P-g1q"/>
+                        <outlet property="leftHandGuessCountLabel" destination="90Z-Wq-eUo" id="qX4-d8-wuL"/>
                         <outlet property="leftHandImageView" destination="FRb-iF-PVp" id="akZ-HM-lVv"/>
+                        <outlet property="rightHandGuessCountLabel" destination="c1p-jt-MUk" id="MZX-8P-3EX"/>
                         <outlet property="rightHandImageView" destination="ioO-Pw-Hbs" id="geo-TI-S5q"/>
                     </connections>
                 </viewController>
