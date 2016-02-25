@@ -2,7 +2,7 @@
 //  BalanceViewController.h
 //  iOSClubProject
 //
-//  Created by Alex Ogorek on 2/22/16.
+//  Created by Richard Feldtz on 2/22/16.
 //  Copyright © 2016 iosclub. All rights reserved.
 //
 

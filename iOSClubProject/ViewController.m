@@ -2,7 +2,7 @@
 //  ViewController.m
 //  iOSClubProject
 //
-//  Created by Alex Ogorek on 2/17/16.
+//  Created by Richard Feldtz on 2/17/16.
 //  Copyright © 2016 iosclub. All rights reserved.
 //
 
